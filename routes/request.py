@@ -14,7 +14,6 @@ def search_get():
 def search_post():
     email = request.form.get('email')
     comment = request.form.get('comment')
-    print(email," = ",comment)
     if not comment:
         return redirect("/search/?email=prajput@redirect.com&comment=")
     return render_template("request.html",**dict(email=email,comment=comment))
