@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Request Example{% endblock %}
+
+{% block content %}
+    <h1>Links</h1>
+    <a href="/search/?key=001&email=prakash@yahoo.com&comment=this is a test comment">Link </a>
+
+    <section>
+        <form method="post" action="/search" >
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={{email}}>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3">{{comment}}</textarea>
+              </div>
+              <div class="mb-3">
+                
+                <button type="submit" class="form-control btn btn-primary   ">Submit</button>
+              </div>
+        </form>    
+    </section>          
+{% endblock %}
