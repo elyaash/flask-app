@@ -2,10 +2,10 @@
 {% block title %}Books{% endblock %}
 
 {% block content %}
-    <h1>List of Books</h1>
-     <ul>
+     <div class="fw-bold mt-2 mb-2">List of Books</div>
+     <ul class="list-group">
     {% for book in books -%}
-        <li>{{book.id}} - {{book.name}}</li>
+        <li class="list-group-item" >{{book.id}} - {{book.name}}</li>
     {% endfor -%}
      </ul>
 {% endblock %}

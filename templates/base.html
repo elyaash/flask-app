@@ -9,8 +9,14 @@
     {% endblock %}
 </head>
 <body>
-    <div id="content" class="container" >{% block content %}{% endblock %}</div>
-    <div id="footer" class="container">
+   
+    <div id="content" class="container" >
+        <!-- Top Nav-->
+        {% include 'topnav.html' %}
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer" class="container text-center mt-2 bg-dark text-white">
         {% block footer %}
         &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
         {% endblock %}
